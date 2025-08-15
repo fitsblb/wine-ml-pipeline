@@ -1,0 +1,11 @@
+paths:
+  data_raw: artifacts/data_ingestion/winequality-red.csv
+  data_processed_dir: artifacts/data_transformation
+  model_dir: artifacts/model_trainer
+  reports_dir: artifacts/model_evaluation
+  schema_file: schema.yaml
+
+features:
+  target: quality
+logging:
+  file: logs/logging.log
