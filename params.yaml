@@ -1,0 +1,14 @@
+seed: 42
+split:
+  test_size: 0.2
+  shuffle: true
+preprocessing:
+  scaler: standard  # options: none|standard|minmax
+model:
+  type: random_forest  # start simple
+  n_estimators: 200
+  max_depth: null
+  n_jobs: -1
+evaluation:
+  primary_metric: rmse
+  secondary_metrics: [mae, r2]
