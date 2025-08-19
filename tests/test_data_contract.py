@@ -12,7 +12,7 @@ def test_data_file_and_columns():
     SEP = CFG.get("io", {}).get("csv_sep", ",")
     assert RAW.exists(), "raw data file is missing"
 
-    df = pd.read_csv(RAW, sep = SEP)
-    SCHEMA = yaml.safe_load(open(project_root/"schema.yaml"))
+    df = pd.read_csv(RAW, sep=SEP)
+    SCHEMA = yaml.safe_load(open(project_root / "schema.yaml"))
     required = set(SCHEMA.get("required", [])) | {SCHEMA.get("target", "quality")}
     assert required.issubset(df.columns), f"missing columns: {sorted(required - set(df.columns))}"
