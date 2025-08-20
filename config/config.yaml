@@ -1,3 +1,6 @@
+io:
+  csv_sep: ";"
+
 paths:
   data_raw: artifacts/data_ingestion/winequality-red.csv
   data_processed_dir: artifacts/data_transformation
