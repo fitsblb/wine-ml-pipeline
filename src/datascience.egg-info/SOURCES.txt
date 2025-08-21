@@ -1,0 +1,13 @@
+README.md
+setup.py
+src/datascience/__init__.py
+src/datascience/config_manager.py
+src/datascience/params_loader.py
+src/datascience.egg-info/PKG-INFO
+src/datascience.egg-info/SOURCES.txt
+src/datascience.egg-info/dependency_links.txt
+src/datascience.egg-info/top_level.txt
+tests/test_data_contract.py
+tests/test_eda_quick.py
+tests/test_pipeline_shapes.py
+tests/test_smoke.py
