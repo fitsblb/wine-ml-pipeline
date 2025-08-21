@@ -11,3 +11,4 @@ tests/test_data_contract.py
 tests/test_eda_quick.py
 tests/test_pipeline_shapes.py
 tests/test_smoke.py
+tests/test_training_and_eval.py
