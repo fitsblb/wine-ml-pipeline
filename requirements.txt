@@ -12,3 +12,4 @@ types-PyYAML
 Flask
 Flask-Cors
 pytest
+gunicorn
