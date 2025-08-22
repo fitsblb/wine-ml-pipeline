@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+.git/
+.gitignore
+artifacts/model_evaluation/*.png
+artifacts/research/
+logs/
+*.ipynb_checkpoints/
