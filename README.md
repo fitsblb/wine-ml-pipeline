@@ -34,12 +34,17 @@ The result? A Random Forest model that beats baseline predictions by 50%+ and se
 <div align="center">
 
 ### 📊 **Research Insights**
-![Correlation Heatmap](artifacts/research/corr_heatmap.png)
+![alt text](artifacts/research/target_hist.png)
+*Distrubition of the Target*
+![alt text](artifacts/research/corr_heatmap.png)
 *What features actually matter for wine quality*
+![alt text](artifacts/model_evaluation/feature_importance.png)
+*Featuresimportance*
 
 ### 📈 **Model Performance**
-![Prediction vs True](artifacts/model_evaluation/pred_vs_true.png)
+![alt text](artifacts/model_evaluation/pred_vs_true.png)
 *Our model vs reality - pretty close!*
+
 
 </div>
 
