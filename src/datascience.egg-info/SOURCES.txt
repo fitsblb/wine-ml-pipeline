@@ -9,6 +9,7 @@ src/datascience.egg-info/dependency_links.txt
 src/datascience.egg-info/top_level.txt
 tests/test_data_contract.py
 tests/test_eda_quick.py
+tests/test_eval_artifacts_exist.py
 tests/test_pipeline_shapes.py
 tests/test_smoke.py
 tests/test_training_and_eval.py
