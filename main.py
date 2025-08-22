@@ -5,6 +5,8 @@ from datascience.components.data_validation import DataValidation
 from datascience.components.data_transformation import DataTransformation
 from datascience.components.model_trainer import ModelTrainer
 from datascience.components.model_evaluation import ModelEvaluation
+from datascience.components.model_diagnostics import ModelDiagnostics
+
 
 CFG = load_config("config/config.yaml")
 SCHEMA = load_schema(CFG["paths"].get("schema_file", "config/schema.yaml"))
@@ -16,6 +18,8 @@ DataValidation(SCHEMA, CFG).check_required(df)
 DataTransformation(PARAMS, CFG).split_and_transform(df)
 ModelTrainer(PARAMS, CFG).train()
 metrics_path = ModelEvaluation(PARAMS, CFG).evaluate()
+diag_paths = ModelDiagnostics(PARAMS, CFG).run()
+print("Diagnostics:", [p.split("/")[-1] for p in diag_paths])
 
 print("Data pipeline + training + evaluation complete.")
 print("Metrics at:", metrics_path)
