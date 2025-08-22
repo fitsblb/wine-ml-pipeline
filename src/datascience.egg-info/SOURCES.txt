@@ -7,6 +7,7 @@ src/datascience.egg-info/PKG-INFO
 src/datascience.egg-info/SOURCES.txt
 src/datascience.egg-info/dependency_links.txt
 src/datascience.egg-info/top_level.txt
+tests/test_api.py
 tests/test_data_contract.py
 tests/test_eda_quick.py
 tests/test_eval_artifacts_exist.py
