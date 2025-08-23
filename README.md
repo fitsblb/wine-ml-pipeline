@@ -43,7 +43,7 @@ The result? A Random Forest model that beats baseline predictions by 50%+ and se
 
 ### 📈 **Model Performance**
 ![alt text](artifacts/model_evaluation/pred_vs_true.png)
-*Our model vs reality - pretty close!*
+*Our model vs reality - pretty close!* 
 
 
 </div>
