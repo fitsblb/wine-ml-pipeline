@@ -6,8 +6,8 @@
   --muted: #93a4b0;
 
   /* Accent: pick one */
-  --accent: #ff2d55;         /* hot pink (default) */
-  /* --accent: #22c55e;      /* green */
+  /*--accent: #ff2d55;         /* hot pink (default) */
+  --accent: #22c55e;      /* green
   /* --accent: #ef4444;      /* red */
 
   /* UI */
@@ -102,3 +102,17 @@ section.cover .cover-main>p a:last-child {
   color: var(--text);
   border: 1px solid color-mix(in oklab, var(--accent), transparent 40%);
 }
+.app-nav a { color: var(--text); opacity:.85; }
+.app-nav a:hover { color: white; }
+
+.docsify-copy-code-button {
+  background: var(--accent);
+  color: #fff;
+  border-radius: 999px;
+  font-weight: 700;
+  padding: 6px 10px;
+  box-shadow: var(--shadow);
+}
+.docsify-copy-code-button:active { transform: translateY(1px); }
+.back-to-top { background: var(--accent) !important; box-shadow: var(--shadow); }
+

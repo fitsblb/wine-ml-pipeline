@@ -602,7 +602,7 @@ MIT
 
 ## 📦 **Package Documentation**
 
-See [Package Documentation](../src/datascience/README.md) for pipeline modules, config loaders, and usage examples.
+See [Package Documentation](package.md) for pipeline modules, config loaders, and usage examples.
 
 ---
 
