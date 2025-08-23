@@ -34,15 +34,15 @@ The result? A Random Forest model that beats baseline predictions by 50%+ and se
 <div align="center">
 
 ### 📊 **Research Insights**
-![alt text](artifacts/research/target_hist.png)
+![alt text](docs/assets/target_hist.png)
 *Distrubition of the Target*
-![alt text](artifacts/research/corr_heatmap.png)
+![alt text](docs/assets/corr_heatmap.png)
 *What features actually matter for wine quality*
-![alt text](artifacts/model_evaluation/feature_importance.png)
+![alt text](docs/assets/feature_importance.png)
 *Featuresimportance*
 
 ### 📈 **Model Performance**
-![alt text](artifacts/model_evaluation/pred_vs_true.png)
+![alt text](docs/assets/pred_vs_true.png)
 *Our model vs reality - pretty close!* 
 
 
@@ -395,17 +395,18 @@ Comprehensive test coverage including:
 
 ```
 wine-ml-pipeline/
-├── app.py                  # Flask API entrypoint
-├── main.py                 # Pipeline orchestrator
+├── app.py                        # Flask API entrypoint
+├── main.py                       # Pipeline orchestrator
 ├── config/
-│   ├── config.yaml         # Paths, IO, and schema anchors
-│   └── schema.yaml         # Data contract
-├── params.yaml             # Model, split, scaler params
+│   ├── config.yaml               # Paths, IO, and schema anchors
+│   └── schema.yaml               # Data contract
+├── params.yaml                   # Model, split, scaler params
 ├── src/
 │   └── datascience/
 │       ├── __init__.py
 │       ├── config_manager.py
 │       ├── params_loader.py
+│       ├── README.md             # 📦 Package documentation: pipeline modules, config loaders, usage
 │       └── components/
 │           ├── __init__.py
 │           ├── data_ingestion.py
@@ -414,14 +415,17 @@ wine-ml-pipeline/
 │           ├── model_trainer.py
 │           ├── model_evaluation.py
 │           └── model_diagnostics.py
-├── research/               # EDA notebooks & exploration
-├── artifacts/              # Outputs: splits, models, metrics, plots
-├── tests/                  # CI tests
+├── research/                     # EDA notebooks & exploration
+├── artifacts/                    # Outputs: splits, models, metrics, plots
+├── docs/                         # 📊 Professional documentation & EDA image outputs
+│   └── assets/                   # 📊 EDA images, visualizations, and supporting figures
+├── tests/                        # CI tests
+├── CONTRIBUTING.md               # 🤝 Contribution guidelines
 ├── .github/workflows/
-│   ├── ci.yml              # Pytest, lint, coverage
-│   └── docker.yml          # Docker build & publish
-├── Dockerfile              # Multi-stage, production-ready
-└── .dockerignore           # Slimmer image
+│   ├── ci.yml                    # Pytest, lint, coverage
+│   └── docker.yml                # Docker build & publish
+├── Dockerfile                    # Multi-stage, production-ready
+└── .dockerignore                 # Slimmer image
 ```
 
 ---
