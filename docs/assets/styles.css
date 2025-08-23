@@ -1,0 +1,104 @@
+:root {
+  /* Core colors */
+  --bg: #0b0f14;             /* ultra-dark slate */
+  --panel: #0f141b;          /* cards / sidebar */
+  --text: #e5e7eb;           /* light gray */
+  --muted: #93a4b0;
+
+  /* Accent: pick one */
+  --accent: #ff2d55;         /* hot pink (default) */
+  /* --accent: #22c55e;      /* green */
+  /* --accent: #ef4444;      /* red */
+
+  /* UI */
+  --radius: 14px;
+  --shadow: 0 10px 30px rgba(0,0,0,.45);
+  --ring: 0 0 0 2px color-mix(in oklab, var(--accent), transparent 65%);
+}
+
+/* Base */
+body { background: radial-gradient(1200px 800px at 10% -10%, rgba(255,45,85,.06), transparent 60%) , var(--bg); }
+.app-name-link, .app-name { font-weight: 800; letter-spacing: .5px; background: linear-gradient(90deg,var(--accent),#8b5cf6 60%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.markdown-section { color: var(--text); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+.markdown-section code, .markdown-section pre { font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+
+/* Sidebar */
+.sidebar { background: var(--panel); box-shadow: var(--shadow); }
+.sidebar .search { padding: 8px 12px; }
+.search input { background: #0b1117; border-radius: var(--radius); border: 1px solid #1f2937; color: var(--text); }
+.sidebar-nav a { border-radius: 10px; }
+.sidebar-nav a:hover { background: #0b1117; color: var(--text); }
+.sidebar-nav .active { background: color-mix(in oklab, var(--accent), transparent 85%); color: var(--text); }
+
+/* Content */
+.markdown-section h1, .markdown-section h2, .markdown-section h3 {
+  position: relative; font-weight: 800; letter-spacing: .2px;
+}
+.markdown-section h1::after, .markdown-section h2::after {
+  content: ""; display: block; height: 3px; width: 64px; margin-top: 10px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+  border-radius: 999px;
+}
+.markdown-section a { color: color-mix(in oklab, var(--accent), white 10%); text-decoration: none; border-bottom: 1px dotted transparent; }
+.markdown-section a:hover { text-shadow: 0 0 14px color-mix(in oklab, var(--accent), transparent 30%); border-color: color-mix(in oklab, var(--accent), transparent 40%); }
+
+.markdown-section pre code {
+  border-radius: 12px; box-shadow: var(--shadow); border: 1px solid #1f2937;
+}
+.markdown-section blockquote {
+  border-left: 4px solid var(--accent); background: #0b1117; color: #d1d5db;
+  padding: 12px 16px; border-radius: 10px; box-shadow: var(--shadow);
+}
+
+.markdown-section table {
+  border-collapse: separate; border-spacing: 0; width: 100%;
+  background: #0b1117; border: 1px solid #1f2937; border-radius: 10px; overflow: hidden;
+}
+.markdown-section th, .markdown-section td { padding: 10px 12px; }
+.markdown-section tr + tr td { border-top: 1px solid #1f2937; }
+.markdown-section th { background: #0f141b; }
+
+/* Buttons (use in README via <a class="btn">) */
+.btn {
+  display: inline-flex; gap: 8px; align-items: center;
+  background: var(--accent); color: white; font-weight: 700;
+  padding: 10px 14px; border-radius: 999px; box-shadow: var(--shadow);
+  transition: transform .06s ease, box-shadow .2s ease;
+}
+.btn:hover { transform: translateY(-1px); box-shadow: 0 12px 34px color-mix(in oklab,var(--accent),transparent 40%); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid color-mix(in oklab,var(--accent),transparent 40%); }
+
+/* Badges row helper */
+.badges { display:flex; flex-wrap:wrap; gap:8px; margin: 12px 0 20px; }
+.badges img { height: 20px; filter: saturate(1.15); }
+
+/* Images */
+.markdown-section img { border-radius: 12px; box-shadow: var(--shadow); }
+
+/* Focus rings */
+a:focus-visible, button:focus-visible, .sidebar-nav a:focus-visible { outline: none; box-shadow: var(--ring); border-radius: 8px; }
+
+/* Small screens */
+@media (max-width: 860px) {
+}
+/* --- Cover tweaks (append at end) --- */
+section.cover {
+  background: radial-gradient(900px 600px at 80% -10%, rgba(255,45,85,.10), transparent 50%), var(--bg) !important;
+}
+
+section.cover .cover-main>p a {
+  /* cover buttons styled like .btn */
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: none;
+  background: var(--accent);
+  color: white;
+  font-weight: 800;
+  box-shadow: var(--shadow);
+}
+
+section.cover .cover-main>p a:last-child {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid color-mix(in oklab, var(--accent), transparent 40%);
+}
