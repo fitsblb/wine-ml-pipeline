@@ -34,15 +34,15 @@ The result? A Random Forest model that beats baseline predictions by 50%+ and se
 <div align="center">
 
 ### 📊 **Research Insights**
-![alt text](docs/assets/target_hist.png)
+![alt text](assets/target_hist.png)
 *Distrubition of the Target*
-![alt text](docs/assets/corr_heatmap.png)
+![alt text](assets/corr_heatmap.png)
 *What features actually matter for wine quality*
-![alt text](docs/assets/feature_importance.png)
+![alt text](assets/feature_importance.png)
 *Featuresimportance*
 
 ### 📈 **Model Performance**
-![alt text](docs/assets/pred_vs_true.png)
+![alt text](assets/pred_vs_true.png)
 *Our model vs reality - pretty close!* 
 
 
@@ -538,9 +538,9 @@ tests/                 # CI tests
 
 ## 🌐 **API Endpoints**
 
-| Endpoint        | Description                       |
-| --------------- | --------------------------------- |
-| `GET /health`   | Status check `{status: "ok"}`     |
+| Endpoint        | Description                         |
+| --------------- | ----------------------------------- |
+| `GET /health`   | Status check `{status: "ok"}`       |
 | `POST /predict` | Predict wine quality (single/batch) |
 
 **Payload keys must match:**  
