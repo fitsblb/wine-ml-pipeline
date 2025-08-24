@@ -1,4 +1,6 @@
 name: Sync docs README
+permissions:
+  contents: write
 
 on:
   push:
